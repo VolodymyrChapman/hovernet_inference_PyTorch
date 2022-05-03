@@ -156,7 +156,7 @@ BibTex entry: <br />
 
 ## Extra Notes
 
-In this repository, we use 3x3 valid convolution in the decoder, as opposed to 5x5 convolution in the original paper. This leads to a slightly larger output and consequently speeds up inference, which is especially important for WSI processing. For further information on how to run the models, refer to the `usage.ipynb` jupyter notebook. <br />
+In this repository, we use 3x3 valid convolution in the decoder, as opposed to 5x5 convolution in the original paper. This leads to a slightly larger output and consequently speeds up inference, which is especially important for WSI processing. For further information on how to run the models, refer to the `usage.ipynb` jupyter notebook. *Needs to be converted to PyTorch* <br />
 
 Models were trained on data at ~40x objective magnification. Therefore, for tile processing, ensure that your data is also at this magnification level. For WSI processing, we ensure patches are processed at 40x. For this, if the slide is scanned < 40x, we scale each patch before before input to HoVer-Net.
 
