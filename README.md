@@ -1,6 +1,8 @@
 # HoVer-Net Inference Code
 
-HoVer-Net Tile and WSI processing code for simultaneous nuclear segmentation and classification in histology images. <br />
+HoVer-Net Tile and WSI processing code for simultaneous nuclear segmentation and classification in histology images. 
+This is a PyTorch implementation of the following repo: https://github.com/simongraham/hovernet_inference using code from https://github.com/vqdang/hover_net
+<br />
 
 [Link](https://www.sciencedirect.com/science/article/abs/pii/S1361841519301045?via%3Dihub) to Medical Image Analysis paper.  <br />
 
@@ -9,7 +11,7 @@ HoVer-Net Tile and WSI processing code for simultaneous nuclear segmentation and
 We will now be primarily supporting the PyTorch version of this code, which also enables model training. For more information please refer to [this repository](https://github.com/vqdang/hover_net).  <br />
 
 
-## Set up envrionment
+## Set up envrionment -- in progress (VC)
 
 ```
 conda create --name hovernet python=3.6
@@ -19,7 +21,7 @@ pip install -r requirements.txt
 
 Glymur requires OpenJPEG as a dependency. If this is not installed, use `conda install -c conda-forge openjpeg`.
 
-## Running the code
+## Running the code -- testing (VC)
 
 Before running the code, download the HoVer-Net weights [here](https://drive.google.com/drive/folders/1NwnF71vuhMB3QeV9R5CFDyYFBGaexf_f?usp=sharing). There are two checkpoint files that are available to use: `pannuke.npz` and `monusac.npz`, which correspond to the dataset that they were trained on. See below for licensing details. 
 
