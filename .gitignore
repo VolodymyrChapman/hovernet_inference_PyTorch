@@ -26,3 +26,4 @@ __pycache__/
 wsi/
 wsi_out/
 cache/
+models/checkpoints/lr_10e_-4_net_epoch=50.tar

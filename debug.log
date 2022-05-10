@@ -10,3 +10,35 @@
 |2022-05-10|11:00:06.719| [INFO] ........................ Done Assembling H2602_HE_474067.svs_None_(1.00,50581,59590,2299,2402)
 |2022-05-10|11:00:20.663| [INFO] ........................ Done Assembling H4238_HE_474069.svs_None_(1.00,6434,48211,3196,4113)
 |2022-05-10|11:00:22.032| [INFO] ........................ Done Assembling H4941_HE_474079.svs_None_(1.00,23331,32792,3654,2369)
+|2022-05-10|14:25:30.492| [INFO] .... Detect #GPUS: 1
+|2022-05-10|14:27:12.127| [INFO] .... Detect #GPUS: 1
+|2022-05-10|14:27:17.630| [INFO] ................ Process: 474051
+|2022-05-10|14:27:17.641| [ERROR] Crash
+Traceback (most recent call last):
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 746, in process_wsi_list
+    self.process_single_file(wsi_path, msk_path, self.output_dir)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 473, in process_single_file
+    read_mag=self.proc_mag, cache_path="%s/src_wsi.npy" % self.cache_path
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/misc/wsi_handler.py", line 72, in prepare_reading
+    np.save(cache_path, self.get_full_img(read_mag=read_mag))
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/misc/wsi_handler.py", line 179, in get_full_img
+    wsi_img = self.file_ptr.read_region((0, 0), read_lv, read_size)
+  File "/home/volodymyr/miniconda3/envs/hovernet_cuda11/lib/python3.6/site-packages/openslide/__init__.py", line 229, in read_region
+    level, size[0], size[1])
+  File "/home/volodymyr/miniconda3/envs/hovernet_cuda11/lib/python3.6/site-packages/openslide/lowlevel.py", line 213, in read_region
+    buf = (w * h * c_uint32)()
+MemoryError
+|2022-05-10|14:31:32.826| [INFO] .... Detect #GPUS: 1
+|2022-05-10|14:31:35.632| [INFO] ................ Process: 474051
+|2022-05-10|14:31:35.641| [INFO] ................ WARNING: No mask found, generating mask via thresholding at 1.25x!
+|2022-05-10|14:31:41.215| [ERROR] Crash
+Traceback (most recent call last):
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 746, in process_wsi_list
+    self.process_single_file(wsi_path, msk_path, self.output_dir)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 524, in process_single_file
+    dtype=np.int32,
+  File "/home/volodymyr/miniconda3/envs/hovernet_cuda11/lib/python3.6/site-packages/numpy/lib/format.py", line 872, in open_memmap
+    mode=mode, offset=offset)
+  File "/home/volodymyr/miniconda3/envs/hovernet_cuda11/lib/python3.6/site-packages/numpy/core/memmap.py", line 250, in __new__
+    fid.seek(bytes - 1, 0)
+OSError: [Errno 22] Invalid argument
