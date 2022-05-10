@@ -42,3 +42,79 @@ Traceback (most recent call last):
   File "/home/volodymyr/miniconda3/envs/hovernet_cuda11/lib/python3.6/site-packages/numpy/core/memmap.py", line 250, in __new__
     fid.seek(bytes - 1, 0)
 OSError: [Errno 22] Invalid argument
+|2022-05-10|17:19:57.932| [INFO] .... Detect #GPUS: 1
+|2022-05-10|17:20:05.503| [INFO] ................ Process: 474058
+|2022-05-10|17:20:05.513| [INFO] ................ WARNING: No mask found, generating mask via thresholding at 1.25x!
+|2022-05-10|17:20:08.282| [INFO] ........ Preparing Input Output Placement: 2.7787246059997415
+|2022-05-10|17:20:24.613| [ERROR] Crash
+Traceback (most recent call last):
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 746, in process_wsi_list
+    self.process_single_file(wsi_path, msk_path, self.output_dir)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 550, in process_single_file
+    self.__get_raw_prediction(chunk_info_list, patch_info_list)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 374, in __get_raw_prediction
+    chunk_patch_info_list[:, 0, 0], pbar_desc
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 287, in __run_model
+    for batch_idx, batch_data in enumerate(dataloader):
+  File "/home/volodymyr/miniconda3/envs/hovernet_cuda11/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 355, in __iter__
+    return self._get_iterator()
+  File "/home/volodymyr/miniconda3/envs/hovernet_cuda11/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 301, in _get_iterator
+    return _MultiProcessingDataLoaderIter(self)
+  File "/home/volodymyr/miniconda3/envs/hovernet_cuda11/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 914, in __init__
+    w.start()
+  File "/home/volodymyr/miniconda3/envs/hovernet_cuda11/lib/python3.6/multiprocessing/process.py", line 105, in start
+    self._popen = self._Popen(self)
+  File "/home/volodymyr/miniconda3/envs/hovernet_cuda11/lib/python3.6/multiprocessing/context.py", line 223, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+  File "/home/volodymyr/miniconda3/envs/hovernet_cuda11/lib/python3.6/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/volodymyr/miniconda3/envs/hovernet_cuda11/lib/python3.6/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/volodymyr/miniconda3/envs/hovernet_cuda11/lib/python3.6/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/home/volodymyr/miniconda3/envs/hovernet_cuda11/lib/python3.6/multiprocessing/popen_spawn_posix.py", line 47, in _launch
+    reduction.dump(process_obj, fp)
+  File "/home/volodymyr/miniconda3/envs/hovernet_cuda11/lib/python3.6/multiprocessing/reduction.py", line 60, in dump
+    ForkingPickler(file, protocol).dump(obj)
+  File "/home/volodymyr/miniconda3/envs/hovernet_cuda11/lib/python3.6/multiprocessing/queues.py", line 57, in __getstate__
+    def __getstate__(self):
+KeyboardInterrupt
+|2022-05-10|17:20:45.327| [INFO] .... Detect #GPUS: 1
+|2022-05-10|17:20:48.841| [INFO] ................ Process: 474058
+|2022-05-10|17:20:48.854| [INFO] ................ WARNING: No mask found, generating mask via thresholding at 1.25x!
+|2022-05-10|17:20:51.536| [INFO] ........ Preparing Input Output Placement: 2.694361021000077
+|2022-05-10|17:27:55.336| [ERROR] Crash
+Traceback (most recent call last):
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 746, in process_wsi_list
+    self.process_single_file(wsi_path, msk_path, self.output_dir)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 550, in process_single_file
+    self.__get_raw_prediction(chunk_info_list, patch_info_list)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 374, in __get_raw_prediction
+    chunk_patch_info_list[:, 0, 0], pbar_desc
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 289, in __run_model
+    sample_output_list = self.run_step(sample_data_list)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/base.py", line 74, in <lambda>
+    self.run_step = lambda input_batch: run_step(input_batch, net)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/models/hovernet/run_desc.py", line 197, in infer_step
+    return pred_output.cpu().numpy()
+KeyboardInterrupt
+|2022-05-10|17:28:04.703| [INFO] .... Detect #GPUS: 1
+|2022-05-10|17:28:11.133| [INFO] ................ Process: 474058
+|2022-05-10|17:28:11.312| [INFO] ........ Preparing Input Output Placement: 0.17879349699796876
+|2022-05-10|18:20:23.728| [ERROR] Crash
+Traceback (most recent call last):
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 746, in process_wsi_list
+    self.process_single_file(wsi_path, msk_path, self.output_dir)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 550, in process_single_file
+    self.__get_raw_prediction(chunk_info_list, patch_info_list)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 370, in __get_raw_prediction
+    np.save("%s/cache_chunk.npy" % self.cache_path, chunk_data)
+  File "<__array_function__ internals>", line 6, in save
+  File "/home/volodymyr/miniconda3/envs/hovernet_cuda11/lib/python3.6/site-packages/numpy/lib/npyio.py", line 529, in save
+    pickle_kwargs=dict(fix_imports=fix_imports))
+  File "/home/volodymyr/miniconda3/envs/hovernet_cuda11/lib/python3.6/site-packages/numpy/lib/format.py", line 675, in write_array
+    array.tofile(fp)
+KeyboardInterrupt
+|2022-05-10|18:23:37.751| [INFO] .... Detect #GPUS: 1
+|2022-05-10|18:23:44.110| [INFO] ................ Process: 474058
+|2022-05-10|18:23:44.321| [INFO] ........ Preparing Input Output Placement: 0.2109356260007189

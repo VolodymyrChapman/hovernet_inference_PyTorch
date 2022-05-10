@@ -9,11 +9,11 @@ python3 'run_infer.py' \
 --nr_inference_workers=11 \
 --nr_post_proc_workers=11 \
 wsi \
---input_dir='/media/veracrypt1/Lymphoma_subgrouping/Projects/Apr_2022_Automated_grading_WSI_pipeline/testing/Test_wsi/wsi' \
---output_dir='/media/veracrypt1/Lymphoma_subgrouping/Projects/Apr_2022_Automated_grading_WSI_pipeline/testing/Test_wsi/output' \
+--input_dir='testing/wsi' \
+--output_dir='testing/outdata' \
 --proc_mag=40 \
---cache_path='/media/veracrypt1/Lymphoma_subgrouping/Projects/Apr_2022_Automated_grading_WSI_pipeline/testing/Test_wsi/cache' \
---input_mask_dir='/media/veracrypt1/Lymphoma_subgrouping/Projects/Apr_2022_Automated_grading_WSI_pipeline/testing/Test_wsi/mask' 
+--cache_path='/media/volodymyr/1TB_Store_A/Lymphoma_backup/cache' \
+--input_mask_dir='testing/mask' 
 
 
  
