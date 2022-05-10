@@ -9,5 +9,5 @@ python3 'run_infer.py' \
 --nr_inference_workers=11 \
 --nr_post_proc_workers=11 \
 tile \
---input_dir='/2TB_mount/Lymphoma_data/From_analyses/May_2022_Testing_HoVerNet_inference_PyTorch/Input_data' \
---output_dir='/2TB_mount/Lymphoma_data/From_analyses/May_2022_Testing_HoVerNet_inference_PyTorch/Output_data'
+--input_dir=$1 \
+--output_dir=$2
