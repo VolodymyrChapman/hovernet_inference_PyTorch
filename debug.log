@@ -118,3 +118,438 @@ KeyboardInterrupt
 |2022-05-10|18:23:37.751| [INFO] .... Detect #GPUS: 1
 |2022-05-10|18:23:44.110| [INFO] ................ Process: 474058
 |2022-05-10|18:23:44.321| [INFO] ........ Preparing Input Output Placement: 0.2109356260007189
+|2022-05-10|20:29:01.334| [INFO] .... Detect #GPUS: 1
+|2022-05-10|20:29:24.011| [INFO] .... Detect #GPUS: 1
+|2022-05-10|20:29:26.770| [INFO] ................ Process: 474058
+|2022-05-10|20:29:27.225| [INFO] ........ Preparing Input Output Placement: 0.4545500919994083
+|2022-05-10|20:43:43.798| [ERROR] Crash
+Traceback (most recent call last):
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 746, in process_wsi_list
+    self.process_single_file(wsi_path, msk_path, self.output_dir)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 550, in process_single_file
+    self.__get_raw_prediction(chunk_info_list, patch_info_list)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 374, in __get_raw_prediction
+    chunk_patch_info_list[:, 0, 0], pbar_desc
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 287, in __run_model
+    for batch_idx, batch_data in enumerate(dataloader):
+  File "/home/volodymyr/miniconda3/envs/hovernet_cuda11/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 517, in __next__
+    data = self._next_data()
+  File "/home/volodymyr/miniconda3/envs/hovernet_cuda11/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 1182, in _next_data
+    idx, data = self._get_data()
+  File "/home/volodymyr/miniconda3/envs/hovernet_cuda11/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 1148, in _get_data
+    success, data = self._try_get_data()
+  File "/home/volodymyr/miniconda3/envs/hovernet_cuda11/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 1019, in _try_get_data
+    " at the beginning of your code") from None
+RuntimeError: Too many open files. Communication with the workers is no longer possible. Please increase the limit using `ulimit -n` in the shell or change the sharing strategy by calling `torch.multiprocessing.set_sharing_strategy('file_system')` at the beginning of your code
+|2022-05-10|20:45:38.099| [INFO] .... Detect #GPUS: 1
+|2022-05-10|20:45:44.222| [INFO] ................ Process: 474058
+|2022-05-10|20:45:44.388| [INFO] ........ Preparing Input Output Placement: 0.16556756299996778
+|2022-05-10|20:51:28.686| [ERROR] Crash
+Traceback (most recent call last):
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 746, in process_wsi_list
+    self.process_single_file(wsi_path, msk_path, self.output_dir)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 550, in process_single_file
+    self.__get_raw_prediction(chunk_info_list, patch_info_list)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 370, in __get_raw_prediction
+    np.save("%s/cache_chunk.npy" % self.cache_path, chunk_data)
+  File "<__array_function__ internals>", line 6, in save
+  File "/home/volodymyr/miniconda3/envs/hovernet_cuda11/lib/python3.6/site-packages/numpy/lib/npyio.py", line 529, in save
+    pickle_kwargs=dict(fix_imports=fix_imports))
+  File "/home/volodymyr/miniconda3/envs/hovernet_cuda11/lib/python3.6/site-packages/numpy/lib/format.py", line 675, in write_array
+    array.tofile(fp)
+KeyboardInterrupt
+|2022-05-10|20:53:06.781| [INFO] .... Detect #GPUS: 1
+|2022-05-10|20:53:10.062| [INFO] ................ Process: 474058
+|2022-05-10|20:53:10.160| [INFO] ........ Preparing Input Output Placement: 0.09778138500041678
+|2022-05-10|22:55:38.490| [INFO] .... Detect #GPUS: 1
+|2022-05-10|22:56:04.936| [INFO] .... Detect #GPUS: 1
+|2022-05-10|22:56:07.701| [INFO] ................ Process: 474058
+|2022-05-10|22:56:08.295| [INFO] ........ Preparing Input Output Placement: 0.5936321809999896
+|2022-05-11|03:54:57.197| [ERROR] Crash
+Traceback (most recent call last):
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 746, in process_wsi_list
+    self.process_single_file(wsi_path, msk_path, self.output_dir)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 550, in process_single_file
+    self.__get_raw_prediction(chunk_info_list, patch_info_list)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 374, in __get_raw_prediction
+    chunk_patch_info_list[:, 0, 0], pbar_desc
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 287, in __run_model
+    for batch_idx, batch_data in enumerate(dataloader):
+  File "/home/volodymyr/miniconda3/envs/hovernet_cuda11/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 517, in __next__
+    data = self._next_data()
+  File "/home/volodymyr/miniconda3/envs/hovernet_cuda11/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 1182, in _next_data
+    idx, data = self._get_data()
+  File "/home/volodymyr/miniconda3/envs/hovernet_cuda11/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 1148, in _get_data
+    success, data = self._try_get_data()
+  File "/home/volodymyr/miniconda3/envs/hovernet_cuda11/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 1019, in _try_get_data
+    " at the beginning of your code") from None
+RuntimeError: Too many open files. Communication with the workers is no longer possible. Please increase the limit using `ulimit -n` in the shell or change the sharing strategy by calling `torch.multiprocessing.set_sharing_strategy('file_system')` at the beginning of your code
+|2022-05-13|14:37:48.505| [INFO] .... Detect #GPUS: 1
+|2022-05-13|14:38:06.310| [INFO] .... Detect #GPUS: 1
+|2022-05-13|14:38:09.180| [INFO] ................ Process: 474058
+|2022-05-13|14:38:09.426| [INFO] ........ Preparing Input Output Placement: 0.24624677300016629
+|2022-05-13|15:32:40.008| [ERROR] Crash
+Traceback (most recent call last):
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 746, in process_wsi_list
+    self.process_single_file(wsi_path, msk_path, self.output_dir)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 550, in process_single_file
+    self.__get_raw_prediction(chunk_info_list, patch_info_list)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 370, in __get_raw_prediction
+    np.save("%s/cache_chunk.npy" % self.cache_path, chunk_data)
+  File "<__array_function__ internals>", line 6, in save
+  File "/home/volodymyr/miniconda3/envs/hovernet_cuda11/lib/python3.6/site-packages/numpy/lib/npyio.py", line 529, in save
+    pickle_kwargs=dict(fix_imports=fix_imports))
+  File "/home/volodymyr/miniconda3/envs/hovernet_cuda11/lib/python3.6/site-packages/numpy/lib/format.py", line 675, in write_array
+    array.tofile(fp)
+KeyboardInterrupt
+|2022-05-13|16:00:37.199| [INFO] .... Detect #GPUS: 1
+|2022-05-13|16:01:35.881| [INFO] .... Detect #GPUS: 1
+|2022-05-13|16:01:38.713| [INFO] ................ Process: 474058
+|2022-05-13|16:01:38.965| [INFO] ........ Preparing Input Output Placement: 0.25218757100014955
+|2022-05-13|16:07:21.126| [ERROR] Crash
+Traceback (most recent call last):
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 746, in process_wsi_list
+    self.process_single_file(wsi_path, msk_path, self.output_dir)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 550, in process_single_file
+    self.__get_raw_prediction(chunk_info_list, patch_info_list)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 370, in __get_raw_prediction
+    np.save("%s/cache_chunk.npy" % self.cache_path, chunk_data)
+  File "<__array_function__ internals>", line 6, in save
+  File "/home/volodymyr/miniconda3/envs/hovernet_cuda11/lib/python3.6/site-packages/numpy/lib/npyio.py", line 529, in save
+    pickle_kwargs=dict(fix_imports=fix_imports))
+  File "/home/volodymyr/miniconda3/envs/hovernet_cuda11/lib/python3.6/site-packages/numpy/lib/format.py", line 675, in write_array
+    array.tofile(fp)
+KeyboardInterrupt
+|2022-05-13|16:08:04.463| [INFO] .... Detect #GPUS: 1
+|2022-05-13|16:08:07.410| [INFO] ................ Process: 474058
+|2022-05-13|16:08:07.517| [INFO] ........ Preparing Input Output Placement: 0.10733891099994253
+|2022-05-13|17:16:16.634| [ERROR] Crash
+Traceback (most recent call last):
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 746, in process_wsi_list
+    self.process_single_file(wsi_path, msk_path, self.output_dir)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 550, in process_single_file
+    self.__get_raw_prediction(chunk_info_list, patch_info_list)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 370, in __get_raw_prediction
+    np.save("%s/cache_chunk.npy" % self.cache_path, chunk_data)
+  File "<__array_function__ internals>", line 6, in save
+  File "/home/volodymyr/miniconda3/envs/hovernet_cuda11/lib/python3.6/site-packages/numpy/lib/npyio.py", line 529, in save
+    pickle_kwargs=dict(fix_imports=fix_imports))
+  File "/home/volodymyr/miniconda3/envs/hovernet_cuda11/lib/python3.6/site-packages/numpy/lib/format.py", line 675, in write_array
+    array.tofile(fp)
+KeyboardInterrupt
+|2022-05-13|17:44:17.733| [INFO] .... Detect #GPUS: 1
+|2022-05-13|18:06:00.931| [INFO] .... Detect #GPUS: 1
+|2022-05-13|18:39:41.549| [INFO] .... Detect #GPUS: 1
+|2022-05-13|18:39:43.237| [INFO] ................ Process: 474058
+|2022-05-13|18:39:43.366| [INFO] ........ Preparing Input Output Placement: 0.12855712000055064
+|2022-05-13|18:39:59.795| [ERROR] Crash
+Traceback (most recent call last):
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 746, in process_wsi_list
+    self.process_single_file(wsi_path, msk_path, self.output_dir)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 550, in process_single_file
+    self.__get_raw_prediction(chunk_info_list, patch_info_list)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 374, in __get_raw_prediction
+    chunk_patch_info_list[:, 0, 0], pbar_desc
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 289, in __run_model
+    sample_output_list = self.run_step(sample_data_list)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/base.py", line 74, in <lambda>
+    self.run_step = lambda input_batch: run_step(input_batch, net)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/models/hovernet/run_desc.py", line 176, in infer_step
+    patch_imgs_gpu = patch_imgs.to("cuda").type(torch.float32)  # to NCHW
+RuntimeError: CUDA error: no kernel image is available for execution on the device
+CUDA kernel errors might be asynchronously reported at some other API call,so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+|2022-05-13|18:40:17.692| [INFO] .... Detect #GPUS: 1
+|2022-05-13|18:40:18.763| [INFO] ................ Process: 474058
+|2022-05-13|18:40:18.843| [INFO] ........ Preparing Input Output Placement: 0.07981835799910186
+|2022-05-13|18:40:31.076| [ERROR] Crash
+Traceback (most recent call last):
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 746, in process_wsi_list
+    self.process_single_file(wsi_path, msk_path, self.output_dir)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 550, in process_single_file
+    self.__get_raw_prediction(chunk_info_list, patch_info_list)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 374, in __get_raw_prediction
+    chunk_patch_info_list[:, 0, 0], pbar_desc
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 287, in __run_model
+    for batch_idx, batch_data in enumerate(dataloader):
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 359, in __iter__
+    return self._get_iterator()
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 305, in _get_iterator
+    return _MultiProcessingDataLoaderIter(self)
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 918, in __init__
+    w.start()
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/multiprocessing/process.py", line 105, in start
+    self._popen = self._Popen(self)
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/multiprocessing/context.py", line 223, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/multiprocessing/popen_spawn_posix.py", line 62, in _launch
+    f.write(fp.getbuffer())
+KeyboardInterrupt
+|2022-05-13|19:05:08.159| [INFO] .... Detect #GPUS: 1
+|2022-05-13|19:05:13.057| [INFO] ................ Process: 474058
+|2022-05-13|19:05:13.203| [INFO] ........ Preparing Input Output Placement: 0.14599064200046996
+|2022-05-13|19:11:44.887| [ERROR] Crash
+Traceback (most recent call last):
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 746, in process_wsi_list
+    self.process_single_file(wsi_path, msk_path, self.output_dir)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 550, in process_single_file
+    self.__get_raw_prediction(chunk_info_list, patch_info_list)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 374, in __get_raw_prediction
+    chunk_patch_info_list[:, 0, 0], pbar_desc
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 287, in __run_model
+    for batch_idx, batch_data in enumerate(dataloader):
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 359, in __iter__
+    return self._get_iterator()
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 305, in _get_iterator
+    return _MultiProcessingDataLoaderIter(self)
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 918, in __init__
+    w.start()
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/multiprocessing/process.py", line 105, in start
+    self._popen = self._Popen(self)
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/multiprocessing/context.py", line 223, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/multiprocessing/popen_spawn_posix.py", line 62, in _launch
+    f.write(fp.getbuffer())
+KeyboardInterrupt
+|2022-05-13|19:13:28.528| [INFO] .... Detect #GPUS: 1
+|2022-05-13|19:13:33.076| [INFO] ................ Process: 474058
+|2022-05-13|19:13:33.129| [INFO] ........ Preparing Input Output Placement: 0.05316898400087666
+|2022-05-13|20:30:42.531| [ERROR] Crash
+Traceback (most recent call last):
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 746, in process_wsi_list
+    self.process_single_file(wsi_path, msk_path, self.output_dir)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 550, in process_single_file
+    self.__get_raw_prediction(chunk_info_list, patch_info_list)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 370, in __get_raw_prediction
+    np.save("%s/cache_chunk.npy" % self.cache_path, chunk_data)
+  File "<__array_function__ internals>", line 6, in save
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/site-packages/numpy/lib/npyio.py", line 529, in save
+    pickle_kwargs=dict(fix_imports=fix_imports))
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/site-packages/numpy/lib/format.py", line 675, in write_array
+    array.tofile(fp)
+KeyboardInterrupt
+|2022-05-13|20:31:32.062| [INFO] .... Detect #GPUS: 1
+|2022-05-13|20:31:39.803| [INFO] ................ Process: 474058
+|2022-05-13|20:31:39.951| [INFO] ........ Preparing Input Output Placement: 0.14686844300013036
+|2022-05-13|20:31:58.588| [ERROR] Crash
+Traceback (most recent call last):
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 746, in process_wsi_list
+    self.process_single_file(wsi_path, msk_path, self.output_dir)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 550, in process_single_file
+    self.__get_raw_prediction(chunk_info_list, patch_info_list)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 374, in __get_raw_prediction
+    chunk_patch_info_list[:, 0, 0], pbar_desc
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 289, in __run_model
+    sample_output_list = self.run_step(sample_data_list)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/base.py", line 74, in <lambda>
+    self.run_step = lambda input_batch: run_step(input_batch, net)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/models/hovernet/run_desc.py", line 184, in infer_step
+    pred_dict = model(patch_imgs_gpu)
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/site-packages/torch/nn/parallel/data_parallel.py", line 166, in forward
+    return self.module(*inputs[0], **kwargs[0])
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/models/hovernet/net_desc.py", line 116, in forward
+    d0 = self.d0(d0)
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/models/hovernet/net_utils.py", line 263, in forward
+    prev_feat = new_feat + shortcut
+RuntimeError: CUDA out of memory. Tried to allocate 1.50 GiB (GPU 0; 7.79 GiB total capacity; 3.55 GiB already allocated; 826.44 MiB free; 4.73 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+|2022-05-13|20:32:23.602| [INFO] .... Detect #GPUS: 1
+|2022-05-13|20:32:27.403| [INFO] ................ Process: 474058
+|2022-05-13|20:32:27.494| [INFO] ........ Preparing Input Output Placement: 0.09076189799816348
+|2022-05-13|20:32:45.892| [ERROR] Crash
+Traceback (most recent call last):
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 746, in process_wsi_list
+    self.process_single_file(wsi_path, msk_path, self.output_dir)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 550, in process_single_file
+    self.__get_raw_prediction(chunk_info_list, patch_info_list)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 374, in __get_raw_prediction
+    chunk_patch_info_list[:, 0, 0], pbar_desc
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 289, in __run_model
+    sample_output_list = self.run_step(sample_data_list)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/base.py", line 74, in <lambda>
+    self.run_step = lambda input_batch: run_step(input_batch, net)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/models/hovernet/run_desc.py", line 184, in infer_step
+    pred_dict = model(patch_imgs_gpu)
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/site-packages/torch/nn/parallel/data_parallel.py", line 166, in forward
+    return self.module(*inputs[0], **kwargs[0])
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/models/hovernet/net_desc.py", line 116, in forward
+    d0 = self.d0(d0)
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/models/hovernet/net_utils.py", line 263, in forward
+    prev_feat = new_feat + shortcut
+RuntimeError: CUDA out of memory. Tried to allocate 1.50 GiB (GPU 0; 7.79 GiB total capacity; 3.55 GiB already allocated; 826.44 MiB free; 4.73 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+|2022-05-13|20:33:07.849| [INFO] .... Detect #GPUS: 1
+|2022-05-13|20:33:11.651| [INFO] ................ Process: 474058
+|2022-05-13|20:33:11.725| [INFO] ........ Preparing Input Output Placement: 0.07311251700230059
+|2022-05-13|20:33:30.097| [ERROR] Crash
+Traceback (most recent call last):
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 746, in process_wsi_list
+    self.process_single_file(wsi_path, msk_path, self.output_dir)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 550, in process_single_file
+    self.__get_raw_prediction(chunk_info_list, patch_info_list)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 374, in __get_raw_prediction
+    chunk_patch_info_list[:, 0, 0], pbar_desc
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 289, in __run_model
+    sample_output_list = self.run_step(sample_data_list)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/base.py", line 74, in <lambda>
+    self.run_step = lambda input_batch: run_step(input_batch, net)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/models/hovernet/run_desc.py", line 184, in infer_step
+    pred_dict = model(patch_imgs_gpu)
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/site-packages/torch/nn/parallel/data_parallel.py", line 166, in forward
+    return self.module(*inputs[0], **kwargs[0])
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/models/hovernet/net_desc.py", line 116, in forward
+    d0 = self.d0(d0)
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/models/hovernet/net_utils.py", line 263, in forward
+    prev_feat = new_feat + shortcut
+RuntimeError: CUDA out of memory. Tried to allocate 1.50 GiB (GPU 0; 7.79 GiB total capacity; 3.55 GiB already allocated; 823.44 MiB free; 4.73 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+|2022-05-13|20:36:41.694| [INFO] .... Detect #GPUS: 1
+|2022-05-13|20:37:01.958| [INFO] .... Detect #GPUS: 1
+|2022-05-13|20:37:05.724| [INFO] ................ Process: 474058
+|2022-05-13|20:37:06.106| [INFO] ........ Preparing Input Output Placement: 0.3813793249999975
+|2022-05-13|20:37:24.522| [ERROR] Crash
+Traceback (most recent call last):
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 746, in process_wsi_list
+    self.process_single_file(wsi_path, msk_path, self.output_dir)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 550, in process_single_file
+    self.__get_raw_prediction(chunk_info_list, patch_info_list)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 374, in __get_raw_prediction
+    chunk_patch_info_list[:, 0, 0], pbar_desc
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 289, in __run_model
+    sample_output_list = self.run_step(sample_data_list)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/base.py", line 74, in <lambda>
+    self.run_step = lambda input_batch: run_step(input_batch, net)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/models/hovernet/run_desc.py", line 184, in infer_step
+    pred_dict = model(patch_imgs_gpu)
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/site-packages/torch/nn/parallel/data_parallel.py", line 166, in forward
+    return self.module(*inputs[0], **kwargs[0])
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/models/hovernet/net_desc.py", line 116, in forward
+    d0 = self.d0(d0)
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/models/hovernet/net_utils.py", line 263, in forward
+    prev_feat = new_feat + shortcut
+RuntimeError: CUDA out of memory. Tried to allocate 1.50 GiB (GPU 0; 7.79 GiB total capacity; 3.55 GiB already allocated; 848.25 MiB free; 4.73 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+|2022-05-13|20:39:48.242| [INFO] .... Detect #GPUS: 1
+|2022-05-13|20:39:51.957| [INFO] ................ Process: 474058
+|2022-05-13|20:39:52.054| [INFO] ........ Preparing Input Output Placement: 0.09687869399999727
+|2022-05-13|21:00:07.850| [ERROR] Crash
+Traceback (most recent call last):
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 746, in process_wsi_list
+    self.process_single_file(wsi_path, msk_path, self.output_dir)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 550, in process_single_file
+    self.__get_raw_prediction(chunk_info_list, patch_info_list)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 374, in __get_raw_prediction
+    chunk_patch_info_list[:, 0, 0], pbar_desc
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 289, in __run_model
+    sample_output_list = self.run_step(sample_data_list)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/base.py", line 74, in <lambda>
+    self.run_step = lambda input_batch: run_step(input_batch, net)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/models/hovernet/run_desc.py", line 197, in infer_step
+    return pred_output.cpu().numpy()
+KeyboardInterrupt
+|2022-05-14|12:26:08.813| [INFO] .... Detect #GPUS: 1
+|2022-05-14|12:26:29.320| [INFO] .... Detect #GPUS: 1
+|2022-05-14|12:26:33.149| [INFO] ................ Process: 474058
+|2022-05-14|12:26:33.349| [INFO] ........ Preparing Input Output Placement: 0.20004166600000417
+|2022-05-14|12:26:52.592| [ERROR] Crash
+Traceback (most recent call last):
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 746, in process_wsi_list
+    self.process_single_file(wsi_path, msk_path, self.output_dir)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 550, in process_single_file
+    self.__get_raw_prediction(chunk_info_list, patch_info_list)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 374, in __get_raw_prediction
+    chunk_patch_info_list[:, 0, 0], pbar_desc
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 289, in __run_model
+    sample_output_list = self.run_step(sample_data_list)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/base.py", line 74, in <lambda>
+    self.run_step = lambda input_batch: run_step(input_batch, net)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/models/hovernet/run_desc.py", line 184, in infer_step
+    pred_dict = model(patch_imgs_gpu)
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/site-packages/torch/nn/parallel/data_parallel.py", line 166, in forward
+    return self.module(*inputs[0], **kwargs[0])
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/models/hovernet/net_desc.py", line 116, in forward
+    d0 = self.d0(d0)
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/models/hovernet/net_utils.py", line 263, in forward
+    prev_feat = new_feat + shortcut
+RuntimeError: CUDA out of memory. Tried to allocate 1.25 GiB (GPU 0; 7.79 GiB total capacity; 2.99 GiB already allocated; 1.24 GiB free; 4.15 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+|2022-05-14|12:27:15.062| [INFO] .... Detect #GPUS: 1
+|2022-05-14|12:27:19.530| [INFO] ................ Process: 474058
+|2022-05-14|12:27:19.629| [INFO] ........ Preparing Input Output Placement: 0.09824557999996841
+|2022-05-15|06:56:11.434| [ERROR] Crash
+Traceback (most recent call last):
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 746, in process_wsi_list
+    self.process_single_file(wsi_path, msk_path, self.output_dir)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 550, in process_single_file
+    self.__get_raw_prediction(chunk_info_list, patch_info_list)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 374, in __get_raw_prediction
+    chunk_patch_info_list[:, 0, 0], pbar_desc
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 287, in __run_model
+    for batch_idx, batch_data in enumerate(dataloader):
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 521, in __next__
+    data = self._next_data()
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 1186, in _next_data
+    idx, data = self._get_data()
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 1152, in _get_data
+    success, data = self._try_get_data()
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 1023, in _try_get_data
+    " at the beginning of your code") from None
+RuntimeError: Too many open files. Communication with the workers is no longer possible. Please increase the limit using `ulimit -n` in the shell or change the sharing strategy by calling `torch.multiprocessing.set_sharing_strategy('file_system')` at the beginning of your code
+|2022-05-15|10:04:21.854| [INFO] .... Detect #GPUS: 1
+|2022-05-15|10:04:29.611| [INFO] ................ Process: 474058
+|2022-05-15|10:04:29.719| [INFO] ........ Preparing Input Output Placement: 0.10746956399816554
+|2022-05-16|22:48:23.743| [INFO] .... Detect #GPUS: 1
+|2022-05-16|22:50:30.509| [INFO] .... Detect #GPUS: 1
+|2022-05-16|22:50:34.269| [INFO] ................ Process: 474058
+|2022-05-16|22:50:34.988| [INFO] ........ Preparing Input Output Placement: 0.7185739429999671
+|2022-05-17|10:26:35.309| [ERROR] Crash
+Traceback (most recent call last):
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 746, in process_wsi_list
+    self.process_single_file(wsi_path, msk_path, self.output_dir)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 550, in process_single_file
+    self.__get_raw_prediction(chunk_info_list, patch_info_list)
+  File "/home/volodymyr/GitHub/hovernet_inference_PyTorch/infer/wsi.py", line 370, in __get_raw_prediction
+    np.save("%s/cache_chunk.npy" % self.cache_path, chunk_data)
+  File "<__array_function__ internals>", line 6, in save
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/site-packages/numpy/lib/npyio.py", line 529, in save
+    pickle_kwargs=dict(fix_imports=fix_imports))
+  File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/site-packages/numpy/lib/format.py", line 675, in write_array
+    array.tofile(fp)
+KeyboardInterrupt
