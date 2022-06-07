@@ -553,3 +553,10 @@ Traceback (most recent call last):
   File "/home/volodymyr/miniconda3/envs/hovernet/lib/python3.6/site-packages/numpy/lib/format.py", line 675, in write_array
     array.tofile(fp)
 KeyboardInterrupt
+|2022-05-26|14:38:29.764| [INFO] .... Detect #GPUS: 1
+|2022-05-26|14:38:37.861| [INFO] ................ Process: 474058
+|2022-05-26|14:38:37.921| [INFO] ........ Preparing Input Output Placement: 0.05979451300004257
+|2022-05-26|15:31:46.025| [INFO] ........ Inference Time: 3188.1010169990004
+|2022-05-26|16:06:08.621| [INFO] ........ Total Post Proc Time: 2062.5073083259995
+|2022-05-26|16:08:57.489| [INFO] ........ Save Time: 168.84919502999946
+|2022-05-26|16:08:57.492| [INFO] ................ Finish
